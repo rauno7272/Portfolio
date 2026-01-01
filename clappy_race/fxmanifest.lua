@@ -5,11 +5,9 @@ description 'Clappy Race - Target Point Racing Lobby Script (React UI - Buildles
 version '2.1.2' -- Updated version for separated buildless React UI
 lua54 'yes'
 
--- Point directly to the HTML file
 ui_page 'ui/index.html'
 
 files {
-    -- Include the HTML and the JSX file
     'ui/index.html',
     'ui/App.jsx',
     'history.json'
