@@ -8,8 +8,8 @@ version '1.0.0'
 
 -- Shared configuration file
 shared_scripts {
-    '@ox_lib/init.lua', -- ox_lib is used for UI elements like menus and inputs
-    '@oxmysql/lib/MySQL.lua', -- MySQL library for database interactions
+    '@ox_lib/init.lua', 
+    '@oxmysql/lib/MySQL.lua', 
     'config.lua' 
 }
 
