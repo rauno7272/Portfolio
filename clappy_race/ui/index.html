@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clappy Race UI (React)</title>
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        /* Base Styles */
+        body, html {
+            overflow: hidden;
+            height: 100%;
+            width: 100%;
+            background-color: transparent;
+            font-family: 'Poppins', sans-serif; /* Assuming Poppins or use Tailwind default */
+            color: #e0e0e0;
+            user-select: none;
+        }
+        #root {
+            height: 100%;
+            width: 100%;
+        }
+         body.overlay-active {
+             /* Use Tailwind for backdrop blur if needed, or keep CSS */
+             /* background: rgba(0, 0, 0, 0); */ /* Fully transparent overlay */
+             /* backdrop-filter: blur(5px); */
+        }
+
+        /* Custom animation for initial modal slide-in */
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50%) translateX(-100px); /* Slide from left */
+                opacity: 0;
+            }
+            to {
+                transform: translateY(-50%) translateX(0); /* Settle in center */
+                opacity: 1;
+            }
+        }
+        /* NOTE: This class is NOT used by the countdown anymore */
+        .animate-slideIn {
+            animation: slideIn 0.9s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+        }
+
+        /* Custom scrollbar (optional but nice) */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.1);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+         /* Style for select dropdown options */
+        select option {
+            background: rgba(28, 30, 39, 0.95) !important; /* Ensure dark background */
+            color: #e0e0e0;
+        }
+
+        /* Style adjustments for Tailwind inputs/selects */
+         input[type="number"], select {
+             appearance: none; /* Removes default OS styling */
+             background-image: none; /* Remove default arrows if any */
+         }
+
+         /* You might need more specific styles depending on the browser */
+          .center-text-outline {
+             -webkit-text-stroke: 2px; /* Color set dynamically */
+             paint-order: stroke fill; /* Ensure stroke appears behind fill */
+         }
+
+
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <!-- React Libraries -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- React App Code (External File) -->
+    <script type="text/babel" src="App.jsx"></script>
+
+</body>
+</html>
+
