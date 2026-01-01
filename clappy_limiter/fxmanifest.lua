@@ -3,7 +3,7 @@
 fx_version 'cerulean'
 game 'gta5'
 
-author 'Your Name'
+author 'Clappy'
 description 'A dynamic vehicle speed limiter based on performance class.'
 version '1.0.0'
 
